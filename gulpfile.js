@@ -2,7 +2,7 @@
 var gulp = require('gulp');
 var pjson = require('./package.json');
 var gutil = require('gulp-util');
-var sass = require('gulp-sass');
+var less = require('gulp-less');
 var autoprefixer = require('gulp-autoprefixer');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
@@ -25,7 +25,7 @@ var pathsConfig = function (appName) {
   return {
     app: this.app,
     templates: this.app + '/templates',
-    sass: this.app + '/static/sass',
+    less: this.app + '/static/less',
     fonts: this.app + '/static/fonts',
     images: this.app + '/static/images',
     js: this.app + '/static/js',
@@ -45,8 +45,8 @@ var sourcesConfig = function (paths) {
       paths.components + '/uikit/js/uikit.js',
       paths.js + '/**/*.js'
     ],
-    sass: [
-      paths.sass + '/*.scss'
+    less: [
+      paths.less + '/*.less'
     ],
     images: [
       paths.images + '/*'
@@ -70,8 +70,8 @@ gulp.task('clean', function () {
 
 // Styles autoprefixing and minification
 gulp.task('styles', function() {
-  return gulp.src(sources.sass)
-    .pipe(sass().on('error', sass.logError))
+  return gulp.src(sources.less)
+    .pipe(less())
     .pipe(plumber()) // Checks for errors
     .pipe(autoprefixer({browsers: ['last 2 version']})) // Adds vendor prefixes
     .pipe(pixrem())  // add fallbacks for rem units
@@ -118,7 +118,7 @@ gulp.task('browserSync', function () {
 
 // Watch for file changes
 gulp.task('watch', function () {
-  gulp.watch(paths.sass + '/**/*.scss', ['styles']).on('change', reload);
+  gulp.watch(paths.less + '/**/*.less', ['styles']).on('change', reload);
   gulp.watch(paths.js + '/**/*.js', ['scripts']).on("change", reload);
   gulp.watch(paths.images + '/*', ['images']);
   gulp.watch(paths.templates + '/**/*.html').on("change", reload);

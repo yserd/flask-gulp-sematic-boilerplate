@@ -35,7 +35,7 @@ Minimal boilerplate/starter project for Flask 0.11 with Gulp for managing fronte
 First, clone the repository:
 
 ```
-$ git clone https://github.com/hypebeast/flask-gulp-minimal-boilerplate
+$ git clone https://github.com/yserd/flask-gulp-sematic-boilerplate.git
 ```
 
 Initialize a new git repository:
@@ -52,7 +52,7 @@ Create a new virtualenv:
 
 ```
 $ virtualenv env
-$ source env/bin/python
+$ source env/bin/activate
 ```
 
 Install Python, Node and Bower packages:

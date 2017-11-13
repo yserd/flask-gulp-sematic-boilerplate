@@ -2,6 +2,6 @@
   "name": "flaskapp",
   "dependencies": {
     "jquery": "~2.2.2",
-    "uikit": "~2.26.1"
+    "semantic-ui-less": "~2.2"
   }
 }
