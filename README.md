@@ -11,9 +11,9 @@ Minimal boilerplate/starter project for Flask 0.11 with Gulp for managing fronte
 
 ## Features
 
-  * [Flask 0.11](http://flask.pocoo.org/)
+  * [Flask 0.12](http://flask.pocoo.org/)
   * [Flask-SQLAlchemy](http://flask-sqlalchemy.pocoo.org), [Flask-WTF](https://flask-wtf.readthedocs.io/en/stable/), [flask-migrate](https://flask-migrate.readthedocs.io/en/latest/), [Flask-DebugToolbar](https://flask-debugtoolbar.readthedocs.io/en/latest/)
-  * [UiKit](https://getuikit.com/): UIkit gives you a comprehensive collection of HTML, CSS, and JS components which is simple to use, easy to customize and extendable.
+  * [Semantic UI](https://semantic-ui.com/): Semantic UI gives you a comprehensive collection of HTML, CSS, and JS components which is simple to use, easy to customize and extendable.
   * [Gulp](http://gulpjs.com/)
   * [BrowserSync](https://www.browsersync.io/)
   * Utilize best Flask practices with [Application Factories](http://flask.pocoo.org/docs/0.11/patterns/appfactories/) and [Blueprints](http://flask.pocoo.org/docs/0.11/blueprints/) patterns to structure the code and enables the creation of large applications
